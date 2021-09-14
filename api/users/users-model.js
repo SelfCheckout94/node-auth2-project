@@ -22,7 +22,6 @@ function findById(user_id) {
 }
 
 async function add({ username, password, role_name }) {
-  // done for you
   let created_user_id;
   await db.transaction(async (trx) => {
     let role_id_to_use;
