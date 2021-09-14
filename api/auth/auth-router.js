@@ -2,7 +2,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const { checkUsernameExists, validateRoleName } = require("./auth-middleware");
 const Users = require("./../users/users-model");
-const { buildToken } = require("../secrets/token");
+const { buildToken } = require("./token-builder");
 
 router.post("/register", validateRoleName, (req, res, next) => {
   let user = req.body;
