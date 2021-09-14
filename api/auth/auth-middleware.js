@@ -41,7 +41,7 @@ const restricted = (req, res, next) => {
 };
 
 const only = (role_name) => (req, res, next) => {
-  if (req.decodedJwt.role === role_name) {
+  if (req.decodedJwt.role_name === role_name) {
     next();
   } else {
     next({
