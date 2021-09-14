@@ -4,7 +4,7 @@ const { checkUsernameExists, validateRoleName } = require("./auth-middleware");
 const Users = require("./../users/users-model");
 const { JWT_SECRET } = require("../secrets"); // use this secret!
 
-router.post("/register", validateRoleName, async (req, res, next) => {
+router.post("/register", validateRoleName, (req, res, next) => {
   try {
     let user = req.body;
 
